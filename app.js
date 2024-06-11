@@ -45,11 +45,11 @@ handleDisconnect();
 
 // In-memory storage for votes (for simplicity)
 let votes = {
-    "RAFIKI . ": 0,
-    "DANIEL. ": 0,
-    "KAMANZI. ": 0,
-    "KAYITESI. ": 0,
-    "INEZA. ": 0
+    "ISHIMWE. ": 0,
+    "MUGISHA. ": 0,
+    "KWIZERA. ": 0,
+    "ISHEJA. ": 0,
+    "HABIMANA. ": 0 
 };
 
 // In-memory storage for user data (for simplicity)
@@ -96,8 +96,8 @@ app.post('/ussd', (req, res) => {
             } else {
                 // Voting option selected
                 response = userLanguages[phoneNumber] === 'en' ? 
-                    `CON Select a candidate:\n1. Raymond IGABINEZA\n2. Florence UMUTONIWASE\n3. Jean Paul KWIBUKA\n4. Gaella UWAYO\n5. Danny HABIMANA` : 
-                    `CON Hitamo umukandida:\n1. Raymond IGABINEZA\n2. Florence UMUTONIWASE\n3. Jean Paul KWIBUKA\n4. Gaella UWAYO\n5. Danny HABIMANA`;
+                    `CON Select a candidate:\n1. David ISHIMWE\n2. Hassan MUGISHA\n3. Jean Bosco KWIZERA\n4. Douce ISHEJA\n5. Daniel HABIMANA` : 
+                    `CON Hitamo umukandida:\n1. David ISHIMWE\n2. Hassan MUGISHA\n3. Jean Bosco KWIZERA\n4. Douce ISHEJA\n5. Daniel HABIMANA`;
             }
         } else if (userInput[2] === '2') {
             // View votes option selected
